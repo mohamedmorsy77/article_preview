@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Barlow+Semi+Condensed:wght@500;600&family=Cairo:wght@300;400;500;700&family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@500;600;700&family=Manrope:wght@500;700&family=Montserrat:wght@500;700&family=Mooli&family=Open+Sans:wght@400;500;700&family=Poppins:wght@600&family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 13px;
+  background-color: var(--Light-Grayish-Blue);
+}
+h1,
+h2,
+h3 {
+  font-family: "Manrope", sans-serif;
+}
+section {
+  position: relative;
+  background-color: white;
+  display: flex;
+  grid-area: 10px;
+  width: 600px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0 0 6px var(--Grayish-Blue);
+}
+section image {
+  max-width: 100%;
+}
+section .image img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+section .info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+section .info h3 {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--Very-Dark-Grayish-Blue);
+}
+section .info p {
+  line-height: 1.5;
+  color: var(--Grayish-Blue);
+  font-size: 10px;
+  font-weight: bold;
+}
+section .info-person {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+section .info-person .person img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+section .info-person .person {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+section .info-person .person p {
+  margin-top: 3px;
+}
+section a {
+  background-color: var(--Very-Dark-Grayish-Blue);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  z-index: 11;
+}
+section .icon div {
+  position: absolute;
+  border-style: solid;
+  border-color: var(--Very-Dark-Grayish-Blue) transparent transparent
+    transparent;
+  border-width: 12px;
+  top: -17px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.share {
+  background-color: var(--Very-Dark-Grayish-Blue);
+  position: absolute;
+  width: 150px;
+
+  padding: 10px;
+
+  color: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  right: -39px;
+  bottom: 72px;
+  box-shadow: 0 0 8px var(--Grayish-Blue);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.hidden {
+  display: none;
+}
+.links {
+  display: flex;
+}
+section .share span {
+  color: var(--Grayish-Blue);
+}
+/* section .share .icons {
+  display: flex;
+} */
+@media (max-width: 767px) {
+  section {
+    flex-direction: column;
+    width: 300px;
+    overflow: hidden;
+  }
+  .share {
+    left: 0;
+    transform: translateY(72px);
+    width: 100%;
+    height: 70px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    transition: 0.7s;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
+    -webkit-transform: translateY(72px);
+    -moz-transform: translateY(72px);
+    -ms-transform: translateY(72px);
+    -o-transform: translateY(72px);
+}
+
+   .hidden {
+    display: none;
+  } 
+
+  section .icon div {
+    display: none;
+  }
+  section .icon {
+    background-color: var(--Grayish-Blue);
+    margin-top: 10px;
+  }
+}
